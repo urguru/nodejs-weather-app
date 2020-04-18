@@ -55,6 +55,11 @@ app.get("/weather", (req, res) => {
   });
 });
 
+app.get('*',(req,res)=>{
+  return res.render('error',{
+    title:"Error Page"
+  })
+})
 
 //Starting the server
 app.listen(port,()=>{
