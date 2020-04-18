@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Know Your Weather</h1>
+        <form  id="weatherForm" action="">
+           <fieldset>
+               <legend>Enter your location</legend>
+            <input type="text" placeholder="Location" id='locationInput'>
+            <button type="submit" class='muted-button text-right' id="submitButton">Search</button>
+           </fieldset>
+        </form>
+    </div>
+    <div class="container hidden" id='res'>
+        <fieldset>
+            <legend>Results</legend>
+            <h3 id="msg"></h3>
+            <div class="flex-row">
+                <div class="flex-small">
+                    <h4>Temperature : <span id="temp"></span> C</h4>
+                    <h4>Precipitation : <span id="precip"></span></h4>
+                    <h4>Location : <span id='loc'></span></h4>
+                </div>
+                <div class="flex-small">
+                    <h4 class="text-center">Weather Details</h4>
+                    <div class="flex-row">
+                        <div class="flex-small">
+                            <h5 id='weather_details' class="text-center"></h5>
+                        </div>
+                        <div class="vertical-center flex-small">
+                            <img src="" alt="Weather Icon" id='img'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>  
+    </div>
+    {{>footer}}
+    
+    <script src="/app.js"></script>
+</body>
+
+</html>
