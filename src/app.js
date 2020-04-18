@@ -7,7 +7,7 @@ const request=require('request')
 
 // App creation
 const app=express()
-
+const port=process.env.PORT || 3000
 
 // Set Paths
 const view_paths=path.join(__dirname,'../templates/views')
@@ -57,7 +57,7 @@ app.get("/weather", (req, res) => {
 
 
 //Starting the server
-app.listen(3000,()=>{
-    console.log("Servr is up and running")
+app.listen(port,()=>{
+    console.log("Servr is up and running on",port)
 })
 
